@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Code from FitBit</title>
+
+    <script type="text/javascript">
+        const urlParams = new URLSearchParams(window.location.search);
+        var code = urlParams.get('json');
+        alert(code);
+        window.opener.postMessage({ code: code }, '*');
+        window.close();
+    </script>
+
+</head>
+
+<body>
+
+</body>
